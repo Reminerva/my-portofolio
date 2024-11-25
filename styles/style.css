@@ -100,6 +100,18 @@ a {
     top: 50%;
 }
 
+.pre-title:after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: legacy;
+    right: -0%;
+    top: 50%;
+}
+
+
 
 /* Layout */
 .grid-3 {
@@ -186,35 +198,35 @@ nav ul li a {
     justify-content: center; 
 }
 
-/* Skills Section */
+/* Specialties Section */
 
-#skills {
+#specialties {
     background-color: var(--secondaryBackgroundColor);
     padding: var(--sectionPadding);
 }
 
-.skills .pre-title{
+.specialties .pre-title{
     margin: 0 auto;
 }
 
-.skills-title {
+.specialties-title {
     text-align: center;
 }
 
-.skills {
+.specialties {
     padding: 3rem 2rem;
     text-align: center;
     background: var(--primaryBackgroundColor);
     border-radius: var(--itemBorderRadius);
 }
 
-.skills h4 {
+.specialties h4 {
     margin: 1.5rem 0;
     font-weight: 500;
     font-size: 1.05rem;
 }
 
-.skills-icon {
+.specialties-icon {
     background: var(--thirdBackgroundColor);
     width: fit-content;
     margin: 0 auto;
@@ -222,10 +234,10 @@ nav ul li a {
     border-radius: 0.5rem;
 }
 
-.skills-icon svg {
+.specialties-icon svg {
     fill: var(--primaryIconColor);
 }
 
-/* .skills-icon img {
+/* .specialties-icon img {
     filter: invert(0.73) sepia(0.42) saturate(3) hue-rotate(239deg);
 } */
