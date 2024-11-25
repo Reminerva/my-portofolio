@@ -106,8 +106,8 @@ a {
     height: 1px;
     background: var(--lineColor);
     position: absolute;
-    display: legacy;
-    right: -0%;
+    display: inside;
+    right: -10%;
     top: 50%;
 }
 
