@@ -8,7 +8,7 @@
     --lineColor: #d9d9d9; /* warna line */
 
     --primaryBackgroundColor: #fff; /* warna background */
-    --scondaryBackgroundColor: #fbfbfb; /* warna background */
+    --secondaryBackgroundColor: #fbfbfb; /* warna background */
     --thirdBackgroundColor: #f5f3fe; /* warna background */
 
     --primaryIconColor: #7e74f1; 
@@ -70,7 +70,14 @@ a {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
+
+
 /* Titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
 .pre-title {
     text-transform: uppercase;
     letter-spacing: .5rem;
@@ -92,6 +99,15 @@ a {
     left: 0;
     top: 50%;
 }
+
+
+/* Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
 
 /* Logo and navigation Menu */
 .nav {
@@ -169,3 +185,47 @@ nav ul li a {
     display: flex;
     justify-content: center; 
 }
+
+/* Skills Section */
+
+#skills {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+
+.skills .pre-title{
+    margin: 0 auto;
+}
+
+.skills-title {
+    text-align: center;
+}
+
+.skills {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.skills h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.skills-icon {
+    background: var(--thirdBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.skills-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+/* .skills-icon img {
+    filter: invert(0.73) sepia(0.42) saturate(3) hue-rotate(239deg);
+} */
