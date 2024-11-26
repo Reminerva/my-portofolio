@@ -420,3 +420,32 @@ nav ul ri a {
     line-height: 2rem;
     padding: 0 1rem;
 }
+
+/* Section Contact */
+#contact {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+}
+
+.contact .pre-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    text-align: center;
+}
+
+.contact-title span {
+    color: var(--primaryIconColor)
+}
+
+.contact-left .qr-wa {
+    align-items: center;
+}
+
+.contact-left .qr-wa img {
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+}
