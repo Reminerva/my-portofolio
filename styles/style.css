@@ -127,12 +127,17 @@ a {
 } */
 
 
+
 /* Logo and navigation Menu */
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 1rem 0;
     background: var(--secondaryBackgroundColor);
+    position: sticky;
+    top: 0; /* Tetap di bagian atas halaman */
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .nav ul {
@@ -235,6 +240,11 @@ nav ul ri a {
     text-align: center;
 }
 
+.specialties-title span {
+    color: var(--primaryIconColor)
+}
+
+
 .specialties {
     padding: 3rem 2rem;
     text-align: center;
@@ -260,10 +270,6 @@ nav ul ri a {
     fill: var(--primaryIconColor);
 }
 
-/* .specialties-icon img {
-    filter: invert(0.73) sepia(0.42) saturate(3) hue-rotate(239deg);
-} */
-
 
 
 /* Portfolios Section */
@@ -281,13 +287,11 @@ nav ul ri a {
     text-align: center;
 }
 
-.portfolios {
-    padding: 3rem 2rem;
-    text-align: center;
+.portfolios-title span {
+    color: var(--primaryIconColor)
 }
 
 .portfolio {
-    
     /* text-align: center; */
     /* background: var(--secondaryBackgroundColor); */
     border-radius: var(--itemBorderRadius);
@@ -345,7 +349,71 @@ nav ul ri a {
 
 
 
+/* Skills Section */
+#skills {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+}
 
-/* .portfolios-icon img {
-    filter: invert(0.73) sepia(0.42) saturate(3) hue-rotate(239deg);
-} */
+.skills .pre-title{
+    margin: 0 auto;
+}
+
+.skills-title {
+    text-align: center;
+}
+
+.skills-title span {
+    color: var(--primaryIconColor)
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education {
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line {
+    padding: 0 0.7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--borderColor);
+    position: relative;
+}
+
+.education-info p {
+    margin: .6rem 0 1.4rem; /*0.6 atas, 0 kiri kanan 1.4 bawah */
+}
+
+.education-years {
+    margin-bottom: 3rem;
+}
+
+.education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--borderColor);
+    border-radius: 50%; /* biar bulat */
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
