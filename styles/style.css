@@ -132,6 +132,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 2rem 0;
+    background: var(--secondaryBackgroundColor);
 }
 
 .nav ul {
@@ -144,7 +145,8 @@ a {
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 2rem;    
+    font-size: 2rem;
+    padding: 0 2rem;  
 }
 
 .logo a {
@@ -157,6 +159,16 @@ nav ul li {
 }
 
 nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+nav ul ri {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem 0 0;
+}
+
+nav ul ri a {
     color: var(--primaryTextColor);
 }
 
