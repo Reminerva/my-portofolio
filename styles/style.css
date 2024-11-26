@@ -57,6 +57,8 @@ a {
     }
 }
 
+
+
 /* Buttons */
 .btn {
     padding: 1rem 1.5rem;
@@ -83,7 +85,7 @@ a {
     letter-spacing: .5rem;
     color: var(--secondaryTextColor);
     position: relative;
-    padding-left: 40px;
+    /* padding-left: 40px; */
     width: fit-content;
     font-weight: 400;
     font-size: .9rem;
@@ -96,7 +98,7 @@ a {
     background: var(--lineColor);
     position: absolute;
     display: block;
-    left: 0;
+    left: -40px;
     top: 50%;
 }
 
@@ -107,7 +109,7 @@ a {
     background: var(--lineColor);
     position: absolute;
     display: inside;
-    right: -10%;
+    right: -30px;
     top: 50%;
 }
 
@@ -119,6 +121,10 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+/* .grid-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+} */
 
 
 /* Logo and navigation Menu */
@@ -171,6 +177,8 @@ nav ul li a {
     right: 35px;
 }
 
+
+
 /* Hero Section */
 #hero {
     height: 720px;
@@ -197,6 +205,8 @@ nav ul li a {
     display: flex;
     justify-content: center; 
 }
+
+
 
 /* Specialties Section */
 
@@ -239,5 +249,91 @@ nav ul li a {
 }
 
 /* .specialties-icon img {
+    filter: invert(0.73) sepia(0.42) saturate(3) hue-rotate(239deg);
+} */
+
+
+
+/* Portfolios Section */
+
+#portfolios {
+    /* background-color: var(--primaryBackgroundColor); */
+    padding: var(--sectionPadding);
+}
+
+.portfolios .pre-title{
+    margin: 0 auto;
+}
+
+.portfolios-title {
+    text-align: center;
+}
+
+.portfolios {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.portfolio {
+    
+    /* text-align: center; */
+    /* background: var(--secondaryBackgroundColor); */
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor);
+}
+
+.portfolio-cover {
+    height: 250px;
+    /* width: 250px; */
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info{
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio h4{
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover{
+    fill: var(--primaryIconColor);
+}
+
+.portfolio-title a svg{
+    transition: .2s ease-in-out;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portfolio-tags div {
+    font-size: .9rem;
+    border: 1px solid var(--borderColor);
+    padding: .4rem 1rem;
+    color: var(--secondaryTextColor);
+}
+
+
+
+
+/* .portfolios-icon img {
     filter: invert(0.73) sepia(0.42) saturate(3) hue-rotate(239deg);
 } */
