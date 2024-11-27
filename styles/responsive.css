@@ -1,0 +1,137 @@
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: .9rem;
+        line-height: 1.8rem;
+    }
+
+    .grid-3 {
+        gap: 1rem;
+    }
+
+    .skills-right ul li {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    /* Burger */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 7px);
+    }
+    
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+    /* Navigation */
+    nav{
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: var(--primaryBackgroundColor);
+        border-left: 1px solid var(--borderColor);
+        z-index: 9;
+        transform: translateX(100%);
+        transition: 0.2s ease-in-out;
+    }
+
+    nav ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    nav ul ri {
+        align-items: center;
+        padding: 0 0 0 0;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    :root {
+        --sectionPadding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        /* margin: .6rem 0 2.5rem; */
+    }
+
+    .pre-title {
+        font-size: .8rem;
+    }
+
+    /* Hero Section */
+    #hero {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .hero-right img {
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+        width: 60%;
+        order: -1;
+    }
+    
+    .hero-left {
+        text-align: center;
+    }
+
+    .hero-left .pre-title{
+        margin: 0 auto;
+    }
+
+    .hero-name {
+        font-size: 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        gap: 2rem;
+    }
+
+    /* contact */
+    .contact-left {
+        margin-right: auto;
+    }
+    .contact-right {
+        margin: 0 auto;
+    }
+
+
+    /* Footer */
+    footer{
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .pre-title{
+        font-size: 0.7rem;
+    }
+}

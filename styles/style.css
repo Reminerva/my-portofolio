@@ -119,6 +119,9 @@ a {
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    place-items: start center;
+    margin-bottom: 2rem;
 }
 
 /* .grid-1 {
@@ -183,15 +186,15 @@ nav ul ri a {
     background-color: black;
     margin: 7px;
     transition: all .3s;
-    z-index: 99; /* muncul paling atas */
+    z-index: 1001; /* muncul paling atas */
 }
 
 .burger {
     display: none;
-    z-index: 99;
+    z-index: 1001;
     position: fixed;
-    top: 33px;
-    right: 35px;
+    top: 20px;
+    right: 4rem;
 }
 
 
@@ -215,7 +218,7 @@ nav ul ri a {
 }
 
 .hero-right img {
-    width: 90%;
+    width: 80%;
 }
 
 .hero-right {
@@ -294,11 +297,12 @@ nav ul ri a {
 }
 
 .portfolio {
-    /* text-align: center; */
+    text-align: justify;
     /* background: var(--secondaryBackgroundColor); */
     border-radius: var(--itemBorderRadius);
     overflow: hidden;
     border: 1px solid var(--borderColor);
+    /* width: minmax(200px, 250px) */
 }
 
 .portfolio-cover {
@@ -428,6 +432,11 @@ nav ul ri a {
     line-height: 2rem;
     padding: 0 1rem;
 }
+
+.skills-left p {
+    text-align: justify;
+}
+
 
 /* Section Contact */
 #contact {
