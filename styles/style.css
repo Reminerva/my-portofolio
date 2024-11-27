@@ -120,7 +120,6 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
-    place-items: start center;
     margin-bottom: 2rem;
 }
 
