@@ -276,7 +276,7 @@ nav ul ri a {
 /* Portfolios Section */
 
 #portfolios {
-    /* background-color: var(--primaryBackgroundColor); */
+    background-color: var(--primaryBackgroundColor);
     padding: var(--sectionPadding);
 }
 
@@ -326,6 +326,14 @@ nav ul ri a {
 .portfolio h4{
     font-weight: 500;
     font-size: 1.05rem;
+}
+
+.portfolio a {
+    color: var(--primaryTextColor);
+}
+
+.portfolio a:hover{
+    color: var(--primaryIconColor);
 }
 
 .portfolio-title a svg:hover{
@@ -424,7 +432,7 @@ nav ul ri a {
 /* Section Contact */
 #contact {
     padding: var(--sectionPadding);
-    background: var(--secondaryBackgroundColor);
+    background: var(--primaryBackgroundColor);
 }
 
 .contact .pre-title{
@@ -478,7 +486,7 @@ nav ul ri a {
 
 .contact-item-icon {
     display: flex;
-    background: black;
+    background: var(--thirdBackgroundColor);
     width: 64px;
     height: 64px;
     padding: 1rem 1.3rem;
@@ -506,4 +514,26 @@ nav ul ri a {
 .contact-item-detail a {
     font-size: 20px;
     color: var(--primaryIconColor);
+}
+
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    box-shadow: 5px 2px 60px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer-icons a {
+    margin: 0 .2rem;
+    
+}
+
+.footer-icons p {
+    margin-top: 1rem;
+}
+
+.footer-icons a:hover svg{
+    box-shadow: 5px 1px 50px var(--primaryIconColorHover);
 }
