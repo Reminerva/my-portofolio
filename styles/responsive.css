@@ -42,7 +42,7 @@
         flex-direction: column;
         background: var(--primaryBackgroundColor);
         border-left: 1px solid var(--borderColor);
-        z-index: 9;
+        z-index: 1000;
         transform: translateX(100%);
         transition: 0.2s ease-in-out;
     }
@@ -127,6 +127,12 @@
 }
 
 @media screen and (max-width: 640px) {
+
+    nav{
+        position: fixed;
+        z-index: 1000;
+    }
+
     .section-title {
         font-size: 1.3rem;
     }

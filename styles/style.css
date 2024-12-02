@@ -321,7 +321,7 @@ nav ul ri a {
 
 .portfolio-title {
     display: flex;
-    justify-content: space-between;
+    text-align: left;
     align-items: center;
     gap: 1rem;
 }
@@ -544,4 +544,84 @@ footer {
 
 .footer-icons a:hover svg{
     box-shadow: 5px 1px 50px var(--primaryIconColorHover);
+}
+
+
+
+/* PAGE HTML PORTOFOLIO MACHINE LEARNING */
+
+.sub-header {
+    /* letter-spacing: .5rem; */
+    position: relative;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 0 2rem 1rem;
+  }
+
+/* SECTION-SECTION */
+
+#overview {
+    padding: var(--sectionPadding);
+    background: var(--primaryBackgroundColor);
+}
+
+#dataset {
+    padding: var(--sectionPadding);
+    background: var(--primaryBackgroundColor);
+}
+
+#clustering {
+    padding: var(--sectionPadding);
+    background: var(--primaryBackgroundColor);
+}
+
+#classification {
+    padding: var(--sectionPadding);
+    background: var(--primaryBackgroundColor);
+}
+
+/*  */
+
+.ml-clustering .pre-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ml-clustering-title {
+    text-align: center;
+}
+
+
+.ml-clustering-title span {
+    color: var(--primaryIconColor)
+}
+
+.ml-clustering-list ul {
+    line-height: 2rem;
+    padding: 0 4rem;
+}
+
+.ml-clustering p {
+    padding: .5rem 2rem;
+    text-align: justify;
+}
+
+.ml-clustering-container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.ml-clustering-container h2 span {
+    color: var(--primaryIconColor)
+}
+
+.ml-interpret-list h4 {
+    padding: 1rem 2rem 0;
 }
