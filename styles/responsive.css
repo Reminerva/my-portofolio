@@ -19,11 +19,6 @@
 
 @media screen and (max-width: 825px) {
     /* Burger */
-
-    .burger_holder .burger{
-        padding-right: 5rem;
-    }
-
     .burger {
         display: block;
         cursor: pointer;
