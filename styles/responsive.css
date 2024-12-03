@@ -42,7 +42,7 @@
         flex-direction: column;
         background: var(--primaryBackgroundColor);
         border-left: 1px solid var(--borderColor);
-        z-index: 1000;
+        z-index: 99;
         transform: translateX(100%);
         transition: 0.2s ease-in-out;
     }
@@ -130,7 +130,7 @@
 
     nav{
         position: fixed;
-        z-index: 1000;
+        z-index: 99;
     }
 
     .section-title {

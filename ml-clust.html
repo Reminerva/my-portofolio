@@ -140,7 +140,7 @@
                     <hr>
 
                     <p>In this project, two models were selected, namely DBSCAN and K-Means, to be tested without prior feature selection. The evaluation results using silhouette score were 0.590 (K-Means) and 0.22 (DBSCAN).</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture1.png" alt="">
                     </div>
                     <p>The K-Means model shows good performance, but the issue is that it uses too many features, which can make interpreting the clustering results more difficult. It means the features selection was needed.</p>
@@ -150,7 +150,7 @@
                     <hr>
 
                     <p>To solve the issue, Correlation Matrix was used to show which features has the most significant correlation to each other.</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture2.png" alt="">
                     </div>
                     <p>Based on the correlation matrix, 16 features are considered, with 5 or 6 to be selected for model training. Here are the 16 features:</p>
@@ -180,16 +180,16 @@
                     <p>In contrast, the best 6 features, MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, MntGoldProds, and Response, produced 5 clusters with a silhouette score of 0.522, which doesn’t meet the minimum silhouette score requirements and was worse than the model with the best 5 features. It means </p>
                     <p>DBSCAN was not used in this case due to the extensive time required for feature selection and hyperparameter tuning. Since the DBSCAN and K-Means models with the best 6 features were not used, the only remaining option is the K-Means model with the best 5 features.</p>
 
-                    <h2 class="sub-header">Cluster Visualization</h2>
+                    <h2 class="sub-header">Cluster <span>Visualization</span></h2>
                     
                     <hr>
 
                     <p>The K-Means with best 5 features was visualized with matplotlib. Here is the visualization:</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture3.png" alt="">
                     </div>
 
-                    <h2 class="sub-header">Cluster Interpretation</h2>
+                    <h2 class="sub-header">Cluster <span>Interpretation</span></h2>
                     <hr>
                     <p>Here is the conclusion of the cluster interpretation. To see more detailed process of this part, visit the google colab link: <a href="https://colab.research.google.com/drive/1tdM-yxUORcr0uFa9mHUUVdXvh4at66vG?usp=sharing">Machine Learing for Clustering</a></p>
                     
@@ -254,20 +254,34 @@
                     <h3 class="pre-title">Section Four</h3>
                     <h1 class="section-title ml-clustering-title"><span>Classification</span></h1>
                     
+                    <h2 class="sub-header">Modeling <span>without</span> Hyperparameter Tuning</h2>
+
+                    <hr>
+
                     <p>The labeled data with cluster numbers was exported for use in the ML-Classification project. The model used in this project is the Random Forest Classifier. Initially, the data was split into a 70:30 ratio. The 70% portion was then used to train the model with default hyperparameters. The model's performance is as follows:</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture4.png" alt="">
                     </div>
+
+                    <h2 class="sub-header">Modeling <span>with</span> Hyperparameter Tuning</h2>
+
+                    <hr>
+
                     <p>The model appears to exhibit overfitting, as it performs well on the training data but significantly worse on the testing data. To address this issue, Hyperparameter Tuning was conducted. Grid Search was chosen as the Hyperparameter Tuning algorithm for this project. The following parameter grid was considered:</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture5.png" alt="">
                     </div>
                     <p>After completing hyperparameter tuning, the best model was selected and its performance evaluated. Below is a comparison of the model's performance before and after hyperparameter tuning:</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture6.png" alt="">
                     </div>
+
+                    <h2 class="sub-header">Modeling <span>after</span> Oversampling and Undersampling</h2>
+
+                    <hr>
+
                     <p>The model after hyperparameter tuning appears to exhibit underfitting, as indicated by poor performance on both the training and testing data. To address this issue, Oversampling and Undersampling methods were applied. Once these methods were implemented, the model was trained both with and without hyperparameter tuning. Below is a comparison of the model's performance before and after hyperparameter tuning.</p>
-                    <div>
+                    <div class="ml-clustering-images">
                         <img src="./images/images_clust/Picture7.png" alt="">
                     </div>
                 </div>
