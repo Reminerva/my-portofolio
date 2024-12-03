@@ -1,5 +1,5 @@
 @media screen and (max-width: 1000px) {
-    p {
+    p, label {
         font-size: .9rem;
         line-height: 1.8rem;
     }
@@ -9,6 +9,10 @@
     }
 
     .skills-right ul li {
+        font-size: .9rem;
+    }
+
+    .ml-clustering-container ul li{
         font-size: .9rem;
     }
 }
@@ -139,6 +143,23 @@
 
     .pre-title{
         font-size: 0.7rem;
+    }
+
+    .sub-header {
+        font-size: 1rem;
+    }
+    
+    .ml-clustering-container p {
+        font-size: .75rem;
+    }
+    
+    .ml-clustering-container ul li {
+        font-size: .75rem;
+    }
+
+    .grid-2-list {
+        display: block;
+        line-height: 2rem;
     }
 
     .ml-clustering-images .img_2{

@@ -90,9 +90,11 @@
                     <p>Customer personality analysis allows businesses to adjust their products based on the target customers from various segments. For example, instead of spending money marketing a new product to all customers in the company's database, the company can analyze which customer segments are most likely to purchase the product and then market it only to that segment.</p>
                     <p>This dataset was chosen from the "Suggested Dataset Sources" in the Machine Learning Project Submission.</p>
                     <p>Number of rows: 2240 | Number of columns: 29 | Dataset Source: <a href="https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis">Dataset Link (Kaggle)</a></a></p>
-                    <p>Here the details of every column:</p>
+
                     <div class="ml-clustering-list">
-                        <ul>
+                        <label for="toggle-list">Here the details of every column: <span>Show/Hide List</span></label>
+                        <input type="checkbox" id="toggle-list" hidden>
+                        <ul class="animated-list">
                             <li>1. ID: Customer’s unique identifier</li>
                             <li>2. Year_Birth: Customer's birth year</li>
                             <li>3. Education: Education Qualification of customer</li>
@@ -155,24 +157,28 @@
                     </div>
                     <p>Based on the correlation matrix, 16 features are considered, with 5 or 6 to be selected for model training. Here are the 16 features:</p>
                     <div class="ml-clustering-list">
-                        <ul>
-                            <li>Year_Birth</li>
-                            <li>Education</li>
-                            <li>Income</li>
-                            <li>MntWines</li>
-                            <li>MntFruits</li>
-                            <li>MntMeatProducts</li>
-                            <li>MntFishProducts</li>
-                            <li>MntSweetProducts</li>
-                            <li>MntGoldProds</li>
-                            <li>NumWebPurchases</li>
-                            <li>NumCatalogPurchases</li>
-                            <li>NumStorePurchases</li>
-                            <li>Kidhome</li>
-                            <li>NumWebVisitsMonth</li>
-                            <li>Marital_Status</li>
-                            <li>Response</li>
-                        </ul>
+                        <div class="grid-2-list">
+                            <ul>
+                                <li>Year_Birth</li>
+                                <li>Education</li>
+                                <li>Income</li>
+                                <li>MntWines</li>
+                                <li>MntFruits</li>
+                                <li>MntMeatProducts</li>
+                                <li>MntFishProducts</li>
+                                <li>MntSweetProducts</li>
+                            </ul>
+                            <ul>
+                                <li>MntGoldProds</li>
+                                <li>NumWebPurchases</li>
+                                <li>NumCatalogPurchases</li>
+                                <li>NumStorePurchases</li>
+                                <li>Kidhome</li>
+                                <li>NumWebVisitsMonth</li>
+                                <li>Marital_Status</li>
+                                <li>Response</li>
+                            </ul>
+                        </div>
                     </div>
                     <p>Since we select 5 or 6 out of 16, It will take so much times if we select them manually.</p>
                     <p>Mathematically, if we selected 5 out of 16 features, we will need C_16^5=16!/(16-5)!5!=4368 trial to find the best 5 features (globally optimal) and C_16^6=16!/(16-6)!6!=8008 trial for the best 6 features selection. From here, the grid search was used to find the best 5 or 6 features, since 8008 trial was considered as ‘not a really big number’ to do the grid search.</p>

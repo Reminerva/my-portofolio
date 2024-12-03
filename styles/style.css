@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, strong {
     color: var(--primaryTextColor);
 }
 
-p {
+p, label {
     font-size: 1rem;
     line-height: 1.9rem;
 }
@@ -597,6 +597,10 @@ hr {
     color: var(--primaryIconColor)
 }
 
+.ml-clustering-container label span {
+    color: var(--primaryIconColor)
+}
+
 
 /* .ml-clustering {
     gap: 3rem 2rem;
@@ -621,14 +625,39 @@ hr {
 }
 
 .ml-clustering-list ul {
+    text-align: justify;
+    display: block;
     line-height: 2rem;
     padding: 0 4rem;
 }
 
-.ml-clustering p {
+.grid-2-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 .7rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+/* List yangbisa di hide and show */
+.animated-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    list-style: none;
+    padding: 0;
+}
+  
+/* Tampilkan list saat checkbox dicentang */
+#toggle-list:checked ~ .animated-list {
+    max-height: 50rem; /* Sesuaikan dengan tinggi maksimal list */
+}
+
+.ml-clustering p, label {
     margin: .5rem 2rem;
     text-align: justify;
 }
+
 
 .ml-interpret-list h4 {
     padding: 1rem 2rem 0;
