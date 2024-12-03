@@ -185,12 +185,12 @@ nav ul ri a {
     background-color: black;
     margin: 7px;
     transition: all .3s;
-    z-index: 100; /* muncul paling atas */
+    z-index: 102; /* muncul paling atas */
 }
 
 .burger {
     display: none;
-    z-index: 100;
+    z-index: 102;
     position: fixed;
     top: 20px;
     right: 4rem;

@@ -22,6 +22,7 @@
     .burger {
         display: block;
         cursor: pointer;
+        padding-right: 2rem;
     }
 
     .toggle-burger .line-1 {
@@ -49,6 +50,7 @@
         z-index: 99;
         transform: translateX(100%);
         transition: 0.2s ease-in-out;
+        padding-right: 4rem;
     }
 
     nav ul {
