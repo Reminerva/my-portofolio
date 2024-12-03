@@ -628,7 +628,13 @@ hr {
     text-align: justify;
     display: block;
     line-height: 2rem;
-    padding: 0 4rem;
+    padding: 0 3rem;
+}
+
+.ml-clustering-list label {
+    text-align: justify;
+    display: block;
+    padding: 0 2rem;
 }
 
 .grid-2-list {
@@ -653,11 +659,10 @@ hr {
     max-height: 50rem; /* Sesuaikan dengan tinggi maksimal list */
 }
 
-.ml-clustering p, label {
+.ml-clustering p {
     margin: .5rem 2rem;
     text-align: justify;
 }
-
 
 .ml-interpret-list h4 {
     padding: 1rem 2rem 0;

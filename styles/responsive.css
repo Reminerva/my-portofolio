@@ -148,6 +148,14 @@
     .sub-header {
         font-size: 1rem;
     }
+
+    p {
+        font-size: .75rem;
+    }
+    
+    ul li {
+        font-size: .75rem;
+    }
     
     .ml-clustering-container p {
         font-size: .75rem;
@@ -163,9 +171,9 @@
     }
 
     .ml-clustering-images .img_2{
-        clip-path: inset(0 4.5rem 0 0);
-        width: 110%;
-        height: 110%;
+        clip-path: inset(0 8rem 0 0);
+        width: 125%;
+        height: 125%;
         padding-left: 2rem;
     }
 }
