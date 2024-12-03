@@ -140,4 +140,11 @@
     .pre-title{
         font-size: 0.7rem;
     }
+
+    .ml-clustering-images .img_2{
+        clip-path: inset(0 4.5rem 0 0);
+        width: 110%;
+        height: 110%;
+        padding-left: 2rem;
+    }
 }

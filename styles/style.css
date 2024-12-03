@@ -638,12 +638,20 @@ hr {
     display: block;
     background: var(--secondaryBackgroundColor);
     border-left: 500px;
-    width: fit-content;
 }
 
-.ml-clustering-container .ml-clustering-images img{
+.ml-clustering-images .img_1{
     display: block;
     margin: 0 auto;
-    width: 90%;
-    height: 90%;
+    justify-content: center;
+    width: 85%;
+    height: 85%;
+}
+
+.ml-clustering-images .img_2{
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    width: 85%;
+    height: 85%;
 }
