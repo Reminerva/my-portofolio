@@ -193,7 +193,15 @@ nav ul ri a {
     z-index: 102;
     position: fixed;
     top: 20px;
-    right: 4rem;
+    right: 2rem;
+}
+
+.burger {
+    display: none;
+    z-index: 102;
+    position: fixed;
+    top: 20px;
+    right: 2rem;
 }
 
 
