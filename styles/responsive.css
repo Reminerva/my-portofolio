@@ -174,15 +174,20 @@
         font-size: .75rem;
     }
     
-    .ml-clustering .sub-header {
+    .ml-clustering h2 {
         display: inside;
         text-align: justify;
         width: 90%;
+        
     }
 
     .ml-clustering p {
         font-size: .75rem;
     }
+
+    /* .ml-clustering h2 {
+
+    } */
     
     .ml-clustering ul li {
         font-size: .75rem;
