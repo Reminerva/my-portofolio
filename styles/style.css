@@ -574,7 +574,7 @@ hr {
 
 #dataset {
     padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
+    background: var(--secondaryBackgroundColor);
 }
 
 #clustering {
@@ -584,7 +584,7 @@ hr {
 
 #classification {
     padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
+    background: var(--secondaryBackgroundColor);
 }
 
 /*  */
@@ -670,7 +670,6 @@ hr {
 
 .ml-clustering-images {
     display: block;
-    background: var(--secondaryBackgroundColor);
     border-left: 500px;
 }
 
