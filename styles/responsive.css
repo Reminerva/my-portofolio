@@ -175,7 +175,7 @@
     }
     
     .ml-clustering .sub-header {
-        display: block;
+        display: inside;
         text-align: justify;
         width: 90%;
     }
