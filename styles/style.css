@@ -196,14 +196,6 @@ nav ul ri a {
     right: 2rem;
 }
 
-.burger {
-    display: none;
-    z-index: 102;
-    position: fixed;
-    top: 20px;
-    right: 2rem;
-}
-
 
 
 /* Hero Section */
@@ -597,15 +589,15 @@ hr {
 
 /*  */
 
-.ml-clustering-container {
+/* .ml-clustering-container {
     margin: 0 auto;
-}
+} */
 
-.ml-clustering-container h2 span {
+.ml-clustering h2 span {
     color: var(--primaryIconColor)
 }
 
-.ml-clustering-container label span {
+.ml-clustering label span {
     color: var(--primaryIconColor)
 }
 
@@ -697,3 +689,4 @@ hr {
     width: 85%;
     height: 85%;
 }
+
