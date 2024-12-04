@@ -178,7 +178,7 @@
         display: inside;
         text-align: justify;
         width: 90%;
-        
+        font-size: 1rem;
     }
 
     .ml-clustering p {
