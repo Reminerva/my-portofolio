@@ -132,6 +132,11 @@
 
 @media screen and (max-width: 640px) {
 
+    /* .ml-clustering p, h2, h4, hr, ul, li {
+        padding: 0 0;
+        margin: 0 0;
+    } */
+
     nav{
         position: fixed;
         z-index: 101;
