@@ -114,7 +114,7 @@ a {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--secondaryIconColor);
+    background-color: var(--primaryIconColor);
     transition: 0.4s;
     border-radius: 50%;
 }
