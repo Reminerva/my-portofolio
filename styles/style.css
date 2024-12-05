@@ -638,7 +638,7 @@ footer {
 }
 
 hr {
-    border: 1px solid black;
+    border: 1px solid var(--primaryTextColor);
     margin: 0 2rem 1rem;
   }
 
