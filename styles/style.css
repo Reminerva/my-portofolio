@@ -130,7 +130,7 @@ input:checked + .slider:before {
 /* Buttons */
 .btn {
     padding: 1rem 1.5rem;
-    background: white;
+    background: var(--secondaryBackgroundColor);
     border: 1.5px solid var(--borderColor);
     cursor: pointer;
     transition: .2 ease-in-out
