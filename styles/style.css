@@ -1,23 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-:root{ /* sejenis color pallette dan template*/
-    --primaryTextColor: #232e35; /* warna title/judul */
-    --secondaryTextColor: #656d72; /* warna teks biasa */
+:root{ 
+    --primaryTextColor: #232e35; 
+    --secondaryTextColor: #656d72; 
     
-    --borderColor: #f1f1f1; /* warna border */
-    --lineColor: #d9d9d9; /* warna line */
+    --borderColor: #f1f1f1; 
+    --lineColor: #d9d9d9; 
 
-    --primaryBackgroundColor: #fff; /* warna background */
-    --secondaryBackgroundColor: #fbfbfb; /* warna background */
-    --thirdBackgroundColor: #f5f3fe; /* warna background */
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb; 
+    --thirdBackgroundColor: #f5f3fe; 
 
     --primaryIconColor: #7e74f1; 
-    --primaryIconColorHover: #5d51e8; 
+    --primaryIconColorHover: #5d51e8;
+    --secondaryIconColor: #03DAC6;
 
-    --sectionPadding: 6rem 0; /* 1 rem = 16 pixels */
+    --sectionPadding: 6rem 0; 
     
     --itemBorderRadius: 0.7rem;
 }
+
+/* Dark Theme */
+/* :root{ 
+    --primaryTextColor: #fff; 
+    --secondaryTextColor: #f1f1f1;
+    
+    --borderColor: #f1f1f1; 
+    --lineColor: #d9d9d9; 
+
+    --primaryBackgroundColor: #000; 
+    --secondaryBackgroundColor: #121212; 
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #BB86FC; 
+    --primaryIconColorHover: #3700B3; 
+    --secondaryIconColor: #03DAC6;
+
+    --sectionPadding: 6rem 0; 
+    
+    --itemBorderRadius: 0.7rem;
+} */
 
 * {
     margin: 0;
@@ -27,6 +49,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    transition: background-color 1s, color 1s;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -58,6 +81,51 @@ a {
 }
 
 
+/* Membuat Switch Dark Theme */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primaryTextColor); /* var(--primaryTextColor) */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--secondaryIconColor);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: var(--primaryTextColor);
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
 
 /* Buttons */
 .btn {
@@ -135,7 +203,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-    background: var(--secondaryBackgroundColor);
+    background: var(--primaryBackgroundColor);
     position: sticky;
     top: 0; /* Tetap di bagian atas halaman */
     z-index: 100;
@@ -157,6 +225,7 @@ a {
 }
 
 .logo a {
+    padding-left: 1rem;
     color: var(--primaryTextColor);
 }
 
@@ -182,7 +251,7 @@ nav ul ri a {
 .burger div {
     width: 25px;
     height: 2px;
-    background-color: black;
+    background-color: var(--primaryTextColor);
     margin: 7px;
     transition: all .3s;
     z-index: 102; /* muncul paling atas */
@@ -199,6 +268,10 @@ nav ul ri a {
 
 
 /* Hero Section */
+header {
+    background: var(--secondaryBackgroundColor);
+}
+
 #hero {
     height: 720px;
     display: grid;
@@ -223,6 +296,9 @@ nav ul ri a {
 .hero-right {
     display: flex;
     justify-content: center; 
+}
+.hero {
+    background-color: black;
 }
 
 
@@ -470,7 +546,7 @@ nav ul ri a {
 
 .contact-left .qr-wa {
     display: block;
-    background: var(--secondaryBackgroundColor);
+    background: var(--thirdBackgroundColor);
     border-left: 500px;
     /* width: fit-content; */
 }
@@ -480,6 +556,7 @@ nav ul ri a {
     margin-left: auto;
     width: 100%;
     height: 100%;
+    margin-right: auto;
 }
 
 .contact-right {
@@ -535,7 +612,7 @@ footer {
 
 .footer-icons a {
     margin: 0 .2rem;
-    
+    fill: var(--primaryTextColor);
 }
 
 .footer-icons p {
@@ -569,22 +646,22 @@ hr {
 
 #overview {
     padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
+    background: var(--secondaryBackgroundColor);
 }
 
 #dataset {
     padding: var(--sectionPadding);
-    background: var(--secondaryBackgroundColor);
+    background: var(--primaryBackgroundColor);
 }
 
 #clustering {
     padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
+    background: var(--secondaryBackgroundColor);
 }
 
 #classification {
     padding: var(--sectionPadding);
-    background: var(--secondaryBackgroundColor);
+    background: var(--primaryBackgroundColor);
 }
 
 /*  */
@@ -601,6 +678,9 @@ hr {
     color: var(--primaryIconColor)
 }
 
+.ml-clustering a span {
+    color: var(--primaryIconColor)
+}
 
 /* .ml-clustering {
     gap: 3rem 2rem;
