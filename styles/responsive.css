@@ -230,14 +230,18 @@
 }
 
 @media screen and (max-width: 350px) {
-    /* Burger */
+    
     .main-container {
         margin: 0 0;
         padding-left: 2rem;
         padding-right: 2rem;
     }
     .main-container{
-        width: 150%;
+        width: 115%;
+    }
+
+    .contact-item-detail a, h4 {
+        font-size: 15px;
     }
 
     nav {
