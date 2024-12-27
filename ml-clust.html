@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Reksa Alamsyah - Machine Learning Clustering</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/responsive.css">
+        <link rel="icon" href="./images/img_icon.ico" type="image/x-icon">
+        <style>
+            .flip-horizontal {
+                transform: scaleX(-1);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="main-container">
+                <div class="nav">
+                    <div class="logo">
+                        <!-- membuat switch dark theme -->
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <a href="/">RA</a>
+                    </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#dataset">Dataset</a></li>
+                        <li><a href="#clustering">Clustering</a></li>
+                        <li><a href="#classification">Classification</a></li>
+                        <ri>
+                            <a href=./index.html#portfolios>
+                                <button class="btn"><p>Back</p></button>
+                            </a>
+                        </ri>
+                    </ul>
+                </nav>
+
+                <div class="burger">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="overview">
+            <div class="ml-clustering main-container">
+                
+                <h3 class="pre-title">Section One</h3>
+                <h1 class="section-title ml-clustering-title"><span>Project</span> Overview</h1>
+
+                <p>The following page is a deployment/visualization of clustering and classification project results based on the web. This project aims to fulfill the final assignment of the Dicoding course by meeting six criteria, which include:</p>
+                <div class="ml-clustering-list">
+                    <ul>
+                        <li>Criterion 1: Using the Provided Notebook Template</li>
+                        <li>Criterion 2: Selecting Dataset Columns</li>
+                        <li>Criterion 3: Achieving a Minimum Silhouette Score of 0.55 in Final Clustering Evaluation</li>
+                        <li>Criterion 4: Writing a Detailed Cluster Interpretation</li>
+                        <li>Criterion 5: Using Dataset and Labels from the Clustering Results</li>
+                        <li>Criterion 6: Achieving a Minimum Accuracy and F1-Score of 87% on the Training and Testing Set</li>
+                    </ul>
+                </div>
+                <p>
+                    The clustering project started with loading the data then followed by Exploratory Data Analysis (include missing value, duplicated data and outliers identification), data preprocessing (include data cleaning and data encoding, standardization & normalization), Clustering Model Development (include feature selection with grid search, model selection and model evaluation) and Cluster Visualization. The final evaluation of the model indicated a good performance, achieving a silhouette score about 59%. The data labeled with the cluster was then exported to a CSV file. The file is then used for the classification project.
+                </p>
+                <p>
+                    The classification project began with loading the file then followed by data splitting (7:3), Classification Model Development (with Random Forest), Hyperparameter Tuning with grid search, and Model Evaluation. It turns out that the model's performance was poor, with very low accuracy and F1 score. Undersampling and Oversampling was used to handle the problem. The last evaluation of the model showed that the model's performance was good, with accuracy and F1 score above 90%.
+                </p>
+                <p>
+                    As explained earlier, this page only presents the results and its visualizations of the clustering and classification project. For more details, you can access it through the following link: <a href="https://colab.research.google.com/drive/1tdM-yxUORcr0uFa9mHUUVdXvh4at66vG?usp=sharing" target="_blank">Machine Learing for Clustering</a>, <a href="https://colab.research.google.com/drive/1LUEx9_auUQL-RJRGrgqkboWwJ2pK2Byk?usp=sharing" target="_blank">Machine Learing for Classification</a>
+                </p>
+                
+                
+            </div>
+        </section>
+
+        <section id="dataset">
+            <div class="ml-clustering main-container">
+                
+                <h3 class="pre-title">Section Two</h3>
+                <h1 class="section-title ml-clustering-title">The <span>Dataset</span></h1>
+                <h2 class="sub-header">Customer Personality Analysis <span>Dataset</span></h2>
+                    
+                <hr>
+                    
+                <p>Customer Personality Analysis is an in-depth analysis of the ideal customers for a company. It helps businesses better understand their customers and enables them to tailor products according to the specific needs, behaviors, and interests of different customer types.</p>
+                <p>Customer personality analysis allows businesses to adjust their products based on the target customers from various segments. For example, instead of spending money marketing a new product to all customers in the company's database, the company can analyze which customer segments are most likely to purchase the product and then market it only to that segment.</p>
+                <p>This dataset was chosen from the "Suggested Dataset Sources" in the Machine Learning Project Submission.</p>
+                <p>Number of rows: 2240 | Number of columns: 29 | Dataset Source: <a href="https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis"><span>Dataset Link (Kaggle)</span></a></p>
+
+                <div class="ml-clustering-list">
+                    <label for="toggle-list">Here the details of every column: <span>Show/Hide List</span></label>
+                    <input type="checkbox" id="toggle-list" hidden>
+                    <ul class="animated-list">
+                        <li>1. ID: Customer’s unique identifier</li>
+                        <li>2. Year_Birth: Customer's birth year</li>
+                        <li>3. Education: Education Qualification of customer</li>
+                        <li>4. Marital_Status: Marital Status of customer</li>
+                        <li>5. Income: Customer's yearly household income</li>
+                        <li>6. Kidhome: Number of children in customer's household</li>
+                        <li>7. Teenhome: Number of teenagers in customer's household</li>
+                        <li>8. Dt_Customer: Date of customer's enrollment with the company</li>
+                        <li>9. Recency: Number of days since customer's last purchase</li>
+                        <li>10. Complain: 1 if the customer complained in the last 2 years, 0 otherwise</li>
+                        <li>11. MntWines: Amount spent on wine in last 2 years</li>
+                        <li>12. MntFruits: Amount spent on fruits in last 2 years</li>
+                        <li>13. MntMeatProducts: Amount spent on meat in last 2 years</li>
+                        <li>14. MntFishProducts: Amount spent on fish in last 2 years</li>
+                        <li>15. MntSweetProducts: Amount spent on sweets in last 2 years</li>
+                        <li>16. MntGoldProds: Amount spent on gold in last 2 years</li>
+                        <li>17. NumDealsPurchases: Number of purchases made with a discount</li>
+                        <li>18. AcceptedCmp1: 1 if customer accepted the offer in the 1st campaign, 0 otherwise</li>
+                        <li>19. AcceptedCmp2: 1 if customer accepted the offer in the 2nd campaign, 0 otherwise</li>
+                        <li>20. AcceptedCmp3: 1 if customer accepted the offer in the 3rd campaign, 0 otherwise</li>
+                        <li>21. AcceptedCmp4: 1 if customer accepted the offer in the 4th campaign, 0 otherwise</li>
+                        <li>22. AcceptedCmp5: 1 if customer accepted the offer in the 5th campaign, 0 otherwise</li>
+                        <li>23. Response: 1 if customer accepted the offer in the last campaign, 0 otherwise</li>
+                        <li>24. NumWebPurchases: Number of purchases made through the company’s website</li>
+                        <li>25. NumCatalogPurchases: Number of purchases made using a catalogue</li>
+                        <li>26. NumStorePurchases: Number of purchases made directly in stores</li>
+                        <li>27. NumWebVisitsMonth: Number of visits to company’s website in the last month</li>
+                        <li>28. Z_CostContact</li>
+                        <li>29. Z_Revenue</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="clustering">
+            <div class="ml-clustering main-container">
+                
+
+                <h3 class="pre-title">Section Three</h3>
+                <h1 class="section-title ml-clustering-title"><span>Clustering</span></h1>
+                    
+                <h2 class="sub-header">Modeling <span>without</span> Feature Selection</h2>
+                
+                <hr>
+
+                <p>In this project, two models were selected, namely DBSCAN and K-Means, to be tested without prior feature selection. The evaluation results using silhouette score were 0.590 (K-Means) and 0.22 (DBSCAN).</p>
+                <div class="ml-clustering-images">
+                    <img class="img_2" src="./images/images_clust/Picture1.png" alt="Clustering 1">
+                </div>
+                <p>The K-Means model shows good performance, but the issue is that it uses too many features, which can make interpreting the clustering results more difficult. It means the features selection was needed.</p>
+
+                <h2 class="sub-header">Modeling <span>with</span> Feature Selection</h2>
+
+                <hr>
+
+                <p>To solve the issue, Correlation Matrix was used to show which features has the most significant correlation to each other.</p>
+                <div class="ml-clustering-images">
+                    <img class="img_1" src="./images/images_clust/Picture2.png" alt="Clustering 2">
+                </div>
+                <p>Based on the correlation matrix, 16 features are considered, with 5 or 6 to be selected for model training. Here are the 16 features:</p>
+                <div class="ml-clustering-list">
+                    <div class="grid-2-list">
+                        <ul>
+                            <li>Year_Birth</li>
+                            <li>Education</li>
+                            <li>Income</li>
+                            <li>MntWines</li>
+                            <li>MntFruits</li>
+                            <li>MntMeatProducts</li>
+                            <li>MntFishProducts</li>
+                            <li>MntSweetProducts</li>
+                        </ul>
+                        <ul>
+                            <li>MntGoldProds</li>
+                            <li>NumWebPurchases</li>
+                            <li>NumCatalogPurchases</li>
+                            <li>NumStorePurchases</li>
+                            <li>Kidhome</li>
+                            <li>NumWebVisitsMonth</li>
+                            <li>Marital_Status</li>
+                            <li>Response</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Since we select 5 or 6 out of 16, It will take so much times if we select them manually.</p>
+                <p>Mathematically, if we selected 5 out of 16 features, we will need C_16^5=16!/(16-5)!5!=4368 trial to find the best 5 features (globally optimal) and C_16^6=16!/(16-6)!6!=8008 trial for the best 6 features selection. From here, the grid search was used to find the best 5 or 6 features, since 8008 trial was considered as ‘not a really big number’ to do the grid search.</p>
+                <p>The grid search applied to K-Means clustering showed that the best 5 features were MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, and Response, with a total of 3 clusters and a 0.593 silhouette score. This was better than the first K-Means model, where feature selection was not applied, because the second model had less features and better Silhouette Score. </p>
+                <p>In contrast, the best 6 features, MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, MntGoldProds, and Response, produced 5 clusters with a silhouette score of 0.522, which doesn’t meet the minimum silhouette score requirements and was worse than the model with the best 5 features. It means </p>
+                <p>DBSCAN was not used in this case due to the extensive time required for feature selection and hyperparameter tuning. Since the DBSCAN and K-Means models with the best 6 features were not used, the only remaining option is the K-Means model with the best 5 features.</p>
+
+                <h2 class="sub-header">Cluster <span>Visualization</span></h2>
+                
+                <hr>
+
+                <p>The K-Means with best 5 features was visualized with matplotlib. Here is the visualization:</p>
+                <div class="ml-clustering-images">
+                    <img class="img_1" src="./images/images_clust/Picture3.png" alt="Clustering 3">
+                </div>
+
+                <h2 class="sub-header">Cluster <span>Interpretation</span></h2>
+                <hr>
+                <p>Here is the conclusion of the cluster interpretation. To see more detailed process of this part, visit the google colab link: <a href="https://colab.research.google.com/drive/1tdM-yxUORcr0uFa9mHUUVdXvh4at66vG?usp=sharing">Machine Learing for Clustering</a></p>
+                
+                <div class="ml-interpret-list">
+                    <h4>Features:</h4>
+                    <div class="ml-clustering-list">
+                        <ul>
+                            <li><span>MntFruits: </span>Amount spent on fruits in the last 2 years</li>
+                            <li><span>MntMeatProducts: </span>Amount spent on meat in the last 2 years</li>
+                            <li><span>MntFishProducts: </span>Amount spent on fish in the last 2 years</li>
+                            <li><span>MntSweetProducts: </span>Amount spent on sweets in the last 2 years</li>
+                            <li><span>Response: </span>1 if the customer accepted the offer in the last campaign, 0 otherwise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ml-interpret-list">
+                    <h4>Cluster 0:</h4>
+                    <div class="ml-clustering-list">
+                        <ul>
+                            <li>Customers in Cluster 0 have moderate spending on fruits.</li>
+                            <li>Customers in Cluster 0 have moderate spending on meat products.</li>
+                            <li>Customers in Cluster 0 have low spending on fish products.</li>
+                            <li>Customers in Cluster 0 have moderate spending on sweet products.</li>
+                            <li>It can be interpreted that customers in Cluster 0 are more likely to respond with "False" for "Response."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ml-interpret-list">
+                    <h4>Cluster 1:</h4>
+                    <div class="ml-clustering-list">
+                        <ul>
+                            <li>Customers in Cluster 1 have low spending on fruits.</li>
+                            <li>Customers in Cluster 1 have low spending on meat products.</li>
+                            <li>Customers in Cluster 1 have moderate spending on fish products.</li>
+                            <li>Customers in Cluster 1 have low spending on sweet products.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ml-interpret-list">
+                    <h4>Cluster 2:</h4>
+                    <div class="ml-clustering-list">
+                        <ul>
+                            <li>Customers in Cluster 2 have high spending on fruits.</li>
+                            <li>Customers in Cluster 2 have high spending on meat products.</li>
+                            <li>Customers in Cluster 2 have high spending on fish products.</li>
+                            <li>Customers in Cluster 2 have high spending on sweet products.</li>
+                            <li>It can be interpreted that customers in Cluster 2 are more likely to respond with "True" for "Response."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section id="classification">
+            <div class="ml-clustering main-container">
+                
+                <h3 class="pre-title">Section Four</h3>
+                <h1 class="section-title ml-clustering-title"><span>Classification</span></h1>
+                    
+                <h2 class="sub-header">Modeling <span>without</span> Hyperparameter Tuning</h2>
+
+                <hr>
+
+                <p>The labeled data with cluster numbers was exported for use in the ML-Classification project. The model used in this project is the Random Forest Classifier. Initially, the data was split into a 70:30 ratio. The 70% portion was then used to train the model with default hyperparameters. The model's performance is as follows:</p>
+                <div class="ml-clustering-images">
+                    <img class="img_2" src="./images/images_clust/Picture4.png" alt="Classification 1">
+                </div>
+
+                <h2 class="sub-header">Modeling <span>with</span> Hyperparameter Tuning</h2>
+
+                <hr>
+
+                <p>The model appears to exhibit overfitting, as it performs well on the training data but significantly worse on the testing data. To address this issue, Hyperparameter Tuning was conducted. Grid Search was chosen as the Hyperparameter Tuning algorithm for this project. The following parameter grid was considered:</p>
+                <div class="ml-clustering-images">
+                    <img class="img_2" src="./images/images_clust/Picture5.png" alt="Classification 2">
+                </div>
+                <p>After completing hyperparameter tuning, the best model was selected and its performance evaluated. Below is a comparison of the model's performance before and after hyperparameter tuning:</p>
+                <div class="ml-clustering-images">
+                    <img class="img_2" src="./images/images_clust/Picture6.png" alt="Classification 3">
+                </div>
+
+                <h2 class="sub-header">Modeling <span>after</span> Oversampling and Undersampling</h2>
+
+                <hr>
+
+                <p>The model after hyperparameter tuning appears to exhibit underfitting, as indicated by poor performance on both the training and testing data. To address this issue, Oversampling and Undersampling methods were applied. Once these methods were implemented, the model was trained both with and without hyperparameter tuning. Below is a comparison of the model's performance before and after hyperparameter tuning.</p>
+                <div class="ml-clustering-images">
+                    <img class="img_2" src="./images/images_clust/Picture7.png" alt="Classification 4">
+                </div>
+                
+            </div>
+        </section>
+
+         <!-- Section Footer -->
+         <footer>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/reksa_alamsyah/profilecard/?igsh=MTRzZG4yN2NlOWZwZg==", target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 132.004 132"><defs><linearGradient id="b"><stop offset="0" stop-color="#3771c8"/><stop stop-color="#3771c8" offset=".128"/><stop offset="1" stop-color="#60f" stop-opacity="0"/></linearGradient><linearGradient id="a"><stop offset="0" stop-color="#fd5"/><stop offset=".1" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient><radialGradient id="c" cx="158.429" cy="578.088" r="65" xlink:href="#a" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)" fx="158.429" fy="578.088"/><radialGradient id="d" cx="147.694" cy="473.455" r="65" xlink:href="#b" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.348 -458.493)" fx="147.694" fy="473.455"/></defs><path fill="url(#c)" d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z" transform="translate(1.004 1)"/><path fill="url(#d)" d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z" transform="translate(1.004 1)"/><path fill="#fff" d="M66.004 18c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C18.06 51.327 18 52.964 18 66s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97c-3.18 0-5.76 2.577-5.76 5.758 0 3.18 2.58 5.76 5.76 5.76 3.18 0 5.76-2.58 5.76-5.76 0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C79.617 90.645 90.65 79.613 90.65 66S79.616 41.35 66.003 41.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/reksa-alamsyah", target="_blank">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 122.88 122.31"><defs><style>.cls-1{fill:#0a66c2;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#fff;}</style></defs><title>linkedin-app</title><path class="cls-1" d="M27.75,0H95.13a27.83,27.83,0,0,1,27.75,27.75V94.57a27.83,27.83,0,0,1-27.75,27.74H27.75A27.83,27.83,0,0,1,0,94.57V27.75A27.83,27.83,0,0,1,27.75,0Z"/><path class="cls-2" d="M49.19,47.41H64.72v8h.22c2.17-3.88,7.45-8,15.34-8,16.39,0,19.42,10.2,19.42,23.47V98.94H83.51V74c0-5.71-.12-13.06-8.42-13.06s-9.72,6.21-9.72,12.65v25.4H49.19V47.41ZM40,31.79a8.42,8.42,0,1,1-8.42-8.42A8.43,8.43,0,0,1,40,31.79ZM23.18,47.41H40V98.94H23.18V47.41Z"/></svg>
+                </a>
+                <a href="https://github.com/Reminerva", target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"/></svg>    
+                </a>
+                <a href="https://www.tiktok.com/@reksa.alamsyah?_t=8rnAovKlMu2&_r=1", target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 1000 1000"><path d="M906.25 0H93.75C42.19 0 0 42.19 0 93.75v812.49c0 51.57 42.19 93.75 93.75 93.75l812.5.01c51.56 0 93.75-42.19 93.75-93.75V93.75C1000 42.19 957.81 0 906.25 0zM684.02 319.72c-32.42-21.13-55.81-54.96-63.11-94.38-1.57-8.51-2.45-17.28-2.45-26.25H515l-.17 414.65c-1.74 46.43-39.96 83.7-86.8 83.7-14.57 0-28.27-3.63-40.35-9.99-27.68-14.57-46.63-43.58-46.63-76.97 0-47.96 39.02-86.98 86.97-86.98 8.95 0 17.54 1.48 25.66 4.01V421.89c-8.41-1.15-16.95-1.86-25.66-1.86-105.01 0-190.43 85.43-190.43 190.45 0 64.42 32.18 121.44 81.3 155.92 30.93 21.72 68.57 34.51 109.14 34.51 105.01 0 190.43-85.43 190.43-190.43V400.21c40.58 29.12 90.3 46.28 143.95 46.28V343.03c-28.89 0-55.8-8.59-78.39-23.31z"/></svg>
+                </a>
+                <p>© 2024 - Made by Reksa Alamsyah</p>
+            </div>
+        </footer>
+        <!-- End of Section Footer -->
+        
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>
