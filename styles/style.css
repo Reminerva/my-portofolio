@@ -1,774 +1,480 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-:root{ 
-    --primaryTextColor: #232e35; 
-    --secondaryTextColor: #656d72; 
-    
-    --borderColor: #f1f1f1; 
-    --lineColor: #d9d9d9; 
+:root {
+  --primaryTextColor: #232e35; /* Untuk title atau judul */
+  --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
 
-    --primaryBackgroundColor: #fff;
-    --secondaryBackgroundColor: #fbfbfb; 
-    --thirdBackgroundColor: #f5f3fe; 
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9; /* untuk line di pre-title */
 
-    --primaryIconColor: #7e74f1; 
-    --primaryIconColorHover: #5d51e8;
-    --secondaryIconColor: #03DAC6;
+  --primaryBackgroundColor: #fff;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
 
-    --sectionPadding: 6rem 0; 
-    
-    --itemBorderRadius: 0.7rem;
+  --primaryIconColor: #7e74f1;
+  --primaryIconColorHover: #5d51e8;
 
-    --fontFamily: 'Roboto', sans-serif;
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
 }
 
-/* Dark Theme */
-/* :root{ 
-    --primaryTextColor: #fff; 
-    --secondaryTextColor: #f1f1f1;
-    
-    --borderColor: #f1f1f1; 
-    --lineColor: #d9d9d9; 
-
-    --primaryBackgroundColor: #000; 
-    --secondaryBackgroundColor: #121212; 
-    --thirdBackgroundColor: #f5f3fe;
-
-    --primaryIconColor: #BB86FC; 
-    --primaryIconColorHover: #3700B3; 
-    --secondaryIconColor: #03DAC6;
-
-    --sectionPadding: 6rem 0; 
-    
-    --itemBorderRadius: 0.7rem;
-} */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    /* font-family: "Roboto", sans-serif; */
-    font-family: var(--fontFamily);
-    transition: background-color 1s, color 1s;
+  font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-    color: var(--primaryTextColor);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
 }
 
-p, label {
-    font-size: 1rem;
-    line-height: 1.9rem;
+p {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /*30.4 px */
 }
 
-p, span, label, input, textarea, li {
-    color: var(--secondaryTextColor);
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextColor);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+/* End Preparation */
+
 .main-container {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1200px) {
-    .main-container{
-        width: 90%;
-    }
-}
-
-
-/* Membuat Switch Dark Theme */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--primaryTextColor); /* var(--primaryTextColor) */
-    transition: 0.4s;
-    border-radius: 34px;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--primaryIconColor);
-    transition: 0.4s;
-    border-radius: 50%;
-}
-  
-input:checked + .slider {
-    background-color: var(--primaryTextColor);
-}
-  
-input:checked + .slider:before {
-    transform: translateX(26px);
+  .main-container {
+    width: 90%;
+  }
 }
 
 /* Buttons */
 .btn {
-    font-family: var(--fontFamily);
-    padding: 1rem 1.5rem;
-    background: var(--secondaryBackgroundColor);
-    border: 1.5px solid var(--borderColor);
-    cursor: pointer;
-    transition: .2 ease-in-out
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .btn:hover {
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
-
-
 
 /* Titles */
 .section-title {
-    margin: 1rem 0 4rem;
-    font-size: 2rem;
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
 }
 
 .pre-title {
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    color: var(--secondaryTextColor);
-    position: relative;
-    /* padding-left: 40px; */
-    width: fit-content;
-    font-weight: 400;
-    font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
-.pre-title:before {
-    content: "";
-    width: 30px;
-    height: 1px;
-    background: var(--lineColor);
-    position: absolute;
-    display: block;
-    left: -40px;
-    top: 50%;
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
 }
 
-.pre-title:after {
-    content: "";
-    width: 30px;
-    height: 1px;
-    background: var(--lineColor);
-    position: absolute;
-    display: inside;
-    right: -30px;
-    top: 50%;
-}
-
-
-
-/* Layout */
+/* Layouts */
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.7rem;
-    margin-bottom: 2rem;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
 }
 
-/* .grid-1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-} */
-
-
-
-/* Logo and navigation Menu */
+/* --- Logo and Navigation Menu --- */
 .nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-    background: var(--primaryBackgroundColor);
-    position: sticky;
-    top: 0; /* Tetap di bagian atas halaman */
-    z-index: 100;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
 }
 
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 3rem;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
 }
 
+/* Logo */
 .logo {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    font-size: 2rem;
-    padding: 0 2rem;  
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .logo a {
-    padding-left: 1rem;
-    color: var(--primaryTextColor);
+  color: var(--primaryTextColor);
 }
 
+/* Navigation Menu */
 nav ul li {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li a {
-    color: var(--primaryTextColor);
+  color: var(--primaryTextColor);
 }
 
-nav ul ri {
-    display: flex;
-    align-items: center;
-    padding: 0 2rem 0 0;
-}
-
-nav ul ri a {
-    color: var(--primaryTextColor);
-}
-
+/* Burger - Save for later on video */
 .burger div {
-    width: 25px;
-    height: 2px;
-    background-color: var(--primaryTextColor);
-    margin: 7px;
-    transition: all .3s;
-    z-index: 102; /* muncul paling atas */
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
 }
 
 .burger {
-    display: none;
-    z-index: 102;
-    position: fixed;
-    top: 20px;
-    right: 2rem;
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
 }
-
-
 
 /* Hero Section */
-header {
-    background: var(--secondaryBackgroundColor);
-}
-
 #hero {
-    height: 720px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 1fr 1fr = 2 kolom */
-    align-items: center;
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
+  align-items: center;
 }
 
 .hero-name {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: .5rem 0 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
 }
 
 .hero-name span {
-    color: var(--primaryIconColor)
+  color: var(--primaryIconColor) !important;
 }
 
 .hero-right img {
-    width: 80%;
+  width: 90%;
 }
 
 .hero-right {
-    display: flex;
-    justify-content: center; 
-}
-.hero {
-    background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
-
-
-/* Specialties Section */
-
-#specialties {
-    background-color: var(--secondaryBackgroundColor);
-    padding: var(--sectionPadding);
+/* Services Section */
+#services {
+  background-color: var(--secondaryBackgroundColor);
+  padding: var(--sectionPadding);
 }
 
-.specialties .pre-title{
-    margin: 0 auto;
-    text-align: center;
+.services .pre-title {
+  margin: 0 auto;
 }
 
-.specialties-title {
-    text-align: center;
+.services-title {
+  text-align: center;
 }
 
-.specialties-title span {
-    color: var(--primaryIconColor)
+.service {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--primaryBackgroundColor);
+  border-radius: var(--itemBorderRadius);
 }
 
-
-.specialties {
-    padding: 3rem 2rem;
-    text-align: center;
-    background: var(--primaryBackgroundColor);
-    border-radius: var(--itemBorderRadius);
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
 }
 
-.specialties h4 {
-    margin: 1.5rem 0;
-    font-weight: 500;
-    font-size: 1.05rem;
+.service-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
 }
 
-.specialties-icon {
-    background: var(--thirdBackgroundColor);
-    width: fit-content;
-    margin: 0 auto;
-    padding: 1rem 1.3rem;
-    border-radius: 0.5rem;
+.service-icon svg {
+  fill: var(--primaryIconColor);
 }
 
-.specialties-icon svg {
-    fill: var(--primaryIconColor);
+.service-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
 }
 
+.service-icon svg {
+  fill: var(--primaryIconColor);
+}
 
-
-/* Portfolios Section */
-
+/* Portfolios */
 #portfolios {
-    background-color: var(--primaryBackgroundColor);
-    padding: var(--sectionPadding);
-}
-
-.portfolios .pre-title{
-    margin: 0 auto;
-    text-align: center;
-}
-
-.portfolios-title {
-    text-align: center;
-}
-
-.portfolios-title span {
-    color: var(--primaryIconColor)
+  padding: var(--sectionPadding);
 }
 
 .portfolio {
-    text-align: justify;
-    /* background: var(--secondaryBackgroundColor); */
-    border-radius: var(--itemBorderRadius);
-    overflow: hidden;
-    border: 1px solid var(--borderColor);
-    /* width: minmax(200px, 250px) */
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden; /* supaya gambar yang diatas itu dia ngikut border radiusnya, karena yang dikasih border radius disini adalah div portfolio ini */
+  border: 1px solid var(--borderColor);
 }
 
 .portfolio-cover {
-    height: 250px;
-    /* width: 250px; */
+  height: 250px;
 }
 
-.portfolio-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.portfolio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.portfolio-info{
-    padding: 2rem 1.5rem;
+.portfolio-info {
+  padding: 2rem 1.5rem;
 }
 
 .portfolio-title {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-.portfolio h4{
-    font-weight: 500;
-    font-size: 1.05rem;
+.portfolio h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
 }
 
-.portfolio a {
-    color: var(--primaryTextColor);
+.portfolio-title a svg:hover {
+  fill: var(--primaryIconColor);
 }
 
-.portfolio a:hover{
-    color: var(--primaryIconColor);
-}
-
-.portfolio-title a svg:hover{
-    fill: var(--primaryIconColor);
-}
-
-.portfolio-title a svg{
-    transition: .2s ease-in-out;
+.portfolio-title a svg {
+  transition: 0.2s ease-in-out;
 }
 
 .portfolio-tags {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .portfolio-tags div {
-    font-size: .9rem;
-    border: 1px solid var(--borderColor);
-    padding: .4rem 1rem;
-    color: var(--secondaryTextColor);
+  font-size: 0.9rem;
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--secondaryTextColor);
 }
 
+.portfolio-tags div {
+  font-size: 0.9rem;
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--secondaryTextColor);
+}
 
-
-/* Skills Section */
+/* Skills and Education */
 #skills {
-    padding: var(--sectionPadding);
-    background: var(--secondaryBackgroundColor);
-}
-
-.skills .pre-title{
-    margin: 0 auto;
-    text-align: center;
-}
-
-.skills-title {
-    text-align: center;
-}
-
-.skills-title span {
-    color: var(--primaryIconColor)
+  padding: var(--sectionPadding);
+  background: var(--secondaryBackgroundColor);
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
+  display: grid;
+  /* grid-template-columns: 40% 60%; */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
 }
 
 .education {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .education .line {
-    padding: 0 0.7rem;
+  padding: 0 0.7rem;
 }
 
 .education .line div {
-    width: 2px;
-    height: 100%;
-    background: var(--borderColor);
-    position: relative;
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
 }
 
 .education-info p {
-    margin: .6rem 0 1.4rem; /*0.6 atas, 0 kiri kanan 1.4 bawah */
+  margin: 0.6rem 0 1.4rem;
 }
 
 .education-years {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
+/* The dot on the line */
 .education .line div:before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background: var(--borderColor);
-    border-radius: 50%; /* biar bulat */
-    position: absolute;
-    left: -6px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--borderColor);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
 }
 
+/* Right side of Skills */
 .skills-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
 }
 
-.skills-left ul {
-    line-height: 2rem;
-    padding: 0 1rem;
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
 }
 
-.skills-left p {
-    text-align: justify;
-}
-
-
-/* Section Contact */
+/* Contact Section */
 #contact {
-    padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
+  padding: var(--sectionPadding);
 }
 
-.contact .pre-title{
-    margin: 0 auto;
-    text-align: center;
+.contact {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
 }
 
-.contact-title {
-    text-align: center;
+.contact-form div {
+  margin-bottom: 1.4rem;
 }
 
-.contact-title span {
-    color: var(--primaryIconColor)
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--secondaryBackgroundColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
 }
 
-.contact-left {
-    margin-top: 1rem;
-    margin-left: auto;
-    width: 200px;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
 }
 
-.contact-left .qr-wa {
-    display: block;
-    background: var(--thirdBackgroundColor);
-    border-left: 500px;
-    /* width: fit-content; */
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.contact-left .qr-wa img {
-    display: block;
-    margin-left: auto;
-    width: 100%;
-    height: 100%;
-    margin-right: auto;
+.btn-submit:hover {
+  background-color: var(--primaryIconColorHover);
 }
 
-.contact-right {
-    margin: auto 0;
-}
-
+/* Contact Section - Right Side */
 .contact-item {
-    display: flex;
-    margin: 25px auto;
-    align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-item-icon {
-    display: flex;
-    background: var(--thirdBackgroundColor);
-    width: 64px;
-    height: 64px;
-    padding: 1rem 1.3rem;
-    border-radius: 0.5rem;
-}
-
-.contact-item-icon div {
-    display: flex;
+  background: var(--thirdBackgroundColor);
+  /* padding: 0.8rem 1rem; */
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-item-icon svg {
-    display: flex;
-}
-
-.contact-item-detail {
-    padding-left: 10px;
+  fill: var(--primaryIconColor);
 }
 
 .contact-item-detail h4 {
-    font-size: 20px;
-    font-weight: 500;
-    padding-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
-.contact-item-detail a {
-    font-size: 20px;
-    color: var(--primaryIconColor);
-}
-
-
-/* Footer */
+/* Footer Section */
 footer {
-    padding: 4rem 0;
-    background: var(--secondaryBackgroundColor);
-    box-shadow: 5px 2px 60px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  padding: 4rem 0;
+  background: var(--secondaryBackgroundColor);
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
 }
 
 .footer-icons a {
-    margin: 0 .2rem;
-    fill: var(--primaryTextColor);
+  margin: 0 0.5rem;
 }
 
-.footer-icons p {
-    margin-top: 1rem;
+.footer-icons svg {
+  fill: #3e3f40;
 }
 
-.footer-icons a:hover svg{
-    box-shadow: 5px 1px 50px var(--primaryIconColorHover);
-}
-
-
-
-/* PAGE HTML PORTOFOLIO MACHINE LEARNING */
-
-.sub-header {
-    /* letter-spacing: .5rem; */
-    position: relative;
-    padding-left: 2rem;
-    padding-top: 2rem;
-    width: fit-content;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-hr {
-    border: 1px solid var(--primaryTextColor);
-    margin: 0 2rem 1rem;
-  }
-
-/* SECTION-SECTION */
-
-#overview {
-    padding: var(--sectionPadding);
-    background: var(--secondaryBackgroundColor);
-}
-
-#dataset {
-    padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
-}
-
-#clustering {
-    padding: var(--sectionPadding);
-    background: var(--secondaryBackgroundColor);
-}
-
-#classification {
-    padding: var(--sectionPadding);
-    background: var(--primaryBackgroundColor);
-}
-
-/*  */
-
-/* .ml-clustering-container {
-    margin: 0 auto;
-} */
-
-.ml-clustering h2 span {
-    color: var(--primaryIconColor)
-}
-
-.ml-clustering label span {
-    color: var(--primaryIconColor)
-}
-
-.ml-clustering a span {
-    color: var(--primaryIconColor)
-}
-
-/* .ml-clustering {
-    gap: 3rem 2rem;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--primaryBackgroundColor);
-    border-radius: var(--itemBorderRadius);
-} */
-
-.ml-clustering .pre-title{
-    margin: 0 auto;
-    text-align: center;
-}
-
-.ml-clustering-title {
-    text-align: center;
-}
-
-
-.ml-clustering-title span {
-    color: var(--primaryIconColor)
-}
-
-.ml-clustering-list ul {
-    text-align: justify;
-    display: block;
-    line-height: 2rem;
-    padding: 0 3rem;
-}
-
-.ml-clustering-list label {
-    text-align: justify;
-    display: block;
-    padding: 0 2rem;
-}
-
-.grid-2-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 .7rem;
-    text-align: justify;
-    line-height: 2rem;
-}
-
-/* List yangbisa di hide and show */
-.animated-list {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    list-style: none;
-    padding: 0;
-}
-  
-/* Tampilkan list saat checkbox dicentang */
-#toggle-list:checked ~ .animated-list {
-    max-height: 50rem; /* Sesuaikan dengan tinggi maksimal list */
-}
-
-.ml-clustering p {
-    margin: .5rem 2rem;
-    text-align: justify;
-}
-
-.ml-interpret-list h4 {
-    padding: 1rem 2rem 0;
-}
-
-.ml-clustering-images {
-    display: block;
-    border-left: 500px;
-}
-
-.ml-clustering-images .img_1{
-    display: block;
-    margin: 0 auto;
-    justify-content: center;
-    width: 85%;
-    height: 85%;
-}
-
-.ml-clustering-images .img_2{
-    display: block;
-    margin: 0 auto;
-    justify-content: center;
-    width: 85%;
-    height: 85%;
+.footer-icons a:hover svg {
+  fill: #000;
 }

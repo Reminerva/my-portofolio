@@ -1,0 +1,261 @@
+@media screen and (max-width: 1000px) {
+
+    .main-container{
+        width: 90%;
+    }   
+
+    p, label {
+        font-size: .9rem;
+        line-height: 1.8rem;
+    }
+
+    .grid-3 {
+        gap: 1rem;
+    }
+
+    .skills-right ul li {
+        font-size: .9rem;
+    }
+
+    .ml-clustering-container ul li{
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+
+    /* Burger */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 7px);
+    }
+    
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+    /* Navigation */
+    nav{
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: var(--primaryBackgroundColor);
+        border-left: 1px solid var(--borderColor);
+        z-index: 99;
+        transform: translateX(100%);
+        transition: 0.2s ease-in-out;
+    }
+
+    nav ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    nav ul ri {
+        align-items: center;
+        padding: 0 0 0 0;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    :root {
+        --sectionPadding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        /* margin: .6rem 0 2.5rem; */
+    }
+
+    .pre-title {
+        font-size: .8rem;
+    }
+
+    /* Hero Section */
+    #hero {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .hero-right img {
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+        width: 60%;
+        order: -1;
+    }
+    
+    .hero-left {
+        text-align: center;
+    }
+
+    .hero-left .pre-title{
+        margin: 0 auto;
+    }
+
+    .hero-name {
+        font-size: 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        gap: 2rem;
+    }
+
+    .education-info h4{
+        font-size: .75rem;
+    }
+
+    .education-info p{
+        font-size: .75rem;
+    }
+
+    /* contact */
+    .contact-left {
+        margin-right: auto;
+    }
+    .contact-right {
+        margin: 0 auto;
+    }
+
+
+    /* Footer */
+    footer{
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    /* .ml-clustering p, h2, h4, hr, ul, li {
+        padding: 0 0;
+        margin: 0 0;
+    } */
+
+    .nav-active ul li{
+        font-size: .75rem;
+    }
+
+    nav{
+        position: fixed;
+        z-index: 101;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .pre-title{
+        font-size: 0.7rem;
+    }
+
+    .sub-header {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .75rem;
+    }
+    
+    ul li {
+        font-size: .75rem;
+    }
+    
+    .ml-clustering h2 {
+        display: inside;
+        text-align: justify;
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .ml-clustering p {
+        font-size: .75rem;
+    }
+
+    /* .ml-clustering h2 {
+
+    } */
+    
+    .ml-clustering ul li {
+        font-size: .75rem;
+    }
+
+    .grid-2-list {
+        display: block;
+        line-height: 2rem;
+    }
+
+    .ml-clustering-images {
+        display: block;
+        width: 90%;
+        height: 90%;
+        overflow: hidden;
+        justify-content: center;
+        padding-left: 2rem;
+    }
+    
+    .ml-clustering-images .img_1{
+        object-fit: cover;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ml-clustering-images .img_2{
+        object-fit: cover;
+        margin: 0 auto;
+        width: 150%;
+        height: 150%;
+    }
+    
+}
+/* 
+@media screen and (max-width: 350px) {
+    
+
+
+    .main-container {
+        margin: 0 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .main-container{
+        width: 115%;
+    }
+
+    .contact-item-detail a, h4 {
+        font-size: 15px;
+    }
+
+    nav {
+        height: 200%;
+    }
+
+    .burger {
+        right: 3.5rem;
+    }
+
+    footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+} */
